@@ -17,7 +17,7 @@ const Vender = mongoose.model('Vender', {
     companyzipcode: String
 });
 
-// the Vender to create should come from the request body
+// //***************** CREATE ************** Create New Vender 
 const create = (req, res) => {
 
     const newVender = req.body;
@@ -29,14 +29,14 @@ const create = (req, res) => {
         res.json({ message: 'New Vender has been Created' });
     })
 }
-//***************** READ ************** User / Get all Users
+//***************** READ ************** Venders / Get all Venders
 const allVenders = (req, res) => {
     Vender.find({}).exec((err, vender) => {
         res.json({ message: "Get all Venders", vender: vender });
     });
 };
 //********************************************************/
-//******************* READ One User ***************By Object ID
+//******************* READ One Vender ***************By Object ID
 const getById = (req, res) => {
     const id = req.params.id;
 
@@ -53,7 +53,7 @@ const getById = (req, res) => {
     });
 };
 //*********************************************************/
-//******************* UPDATE ************************- Update a users record
+//******************* UPDATE ************************- Update a Venders record
 const update = (req, res) => {
     const vender_id = req.params.id;
 
@@ -69,7 +69,7 @@ const update = (req, res) => {
     });
 };
 //*************************************************************/
-//******************* DELETE *****************************- Delete a users record
+//******************* DELETE *****************************- Delete a Venders record
 const destroy = (req, res) => {
     const vender_id = req.params.id;
 
