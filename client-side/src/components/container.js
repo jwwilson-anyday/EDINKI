@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from './title';
+import Venderlist from './venderlist';
 
 
 class Container extends React.Component {
@@ -10,7 +10,7 @@ class Container extends React.Component {
     render() { 
         return ( 
             <div>
-                <Title />
+                <Venderlist />
             </div>
          )
     }
