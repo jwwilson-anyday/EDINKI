@@ -1,9 +1,9 @@
-
+EDINKI - EDucation INKed In
 
 
 # Summary
 
-We are going to be creating our own ride sharing service, RUber!  There is a lot of data that needs to be managed because we are going to have like a billion users within a month.
+This is a Continumm Education App for developing a central location for dentists to search Dental Continumm Education courses by location, dates, and categories.
 
 # Technologies
 
