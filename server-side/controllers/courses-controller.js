@@ -6,6 +6,8 @@ const Course = mongoose.model('Course', {
     coursepresenter: String,
     email: String,
     phone: String,
+    datestart: String,
+    dateend: String,
     costprimary: String,
     costsecondary: String,
     costtertiary: String,

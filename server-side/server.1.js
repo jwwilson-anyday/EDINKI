@@ -5,7 +5,7 @@ const vendersRoutes = require('./routes/venders');
 const coursesRoutes = require('./routes/courses');
 
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 
 // require .env and db.js
 require('dotenv').config();
@@ -28,6 +28,6 @@ app.use(function(req, res, next) {
 app.use('/api/venders', vendersRoutes);
 app.use('/api/courses', coursesRoutes);
 
-app.listen(port, () => console.log(`Server is running on port: ${port}`));
+app.listen(PORT, () => console.log(`Server is running on port: ${port}`));
 
 module.exports = app;
