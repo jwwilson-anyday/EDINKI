@@ -1,80 +1,109 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 export default class Vendercreate extends Component {
-constructor(props){
-super(props);
-this.state ={};
-}
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
+      password: '',
+      website: '',
+      vendername: '',
+      companyname: '',
+      companyaddress1: '',
+      companyaddress2: '',
+      companycity: '',
+      companystate: '',
+      companyzipcode: ''
+    };
+  }
+  providerSubmit = () => {
+    console.log(this.state);
+    console.log(this.state.firstname);
+    console.log(this.state.lastname);
+    console.log(this.state.phone);
+    console.log(this.state.email);
 
-// let newPost = {
-//     title: "hello world",
-//     body: "That's really something"
-// }
+    let newProvider = {
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      phone: this.state.phone,
+      email: this.state.email
+    };
 
-// fetch('http://localhost:5000/api/venders/', {
-//     method: 'post',
-//     body: JSON.stringify(newPost)
-// })
-// .then(response => response.json())
-// .then(data =>{
-//     console.log('post request response data: ', data)
+    fetch('http://localhost:5000/api/venders', {
+      method: 'POST',
+      headers: {
+        Accept: 'applicatoin/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newProvider)
+    })
+      .then(response => response.json())
+      .then(providerdata => {
+        console.log(providerdata);
+        console.log(newProvider.firstname);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
 
-// })
-render(){
-
-    return(
-        <div>
-            <h4>Hi from Vender Create</h4>
-            <h1 id="title">New Provider Information</h1>
-          <div className="inputForms" id="input">
-            <form>
-              <label>Provider Name </label> <br />
-              <input
-                classtype="text"
-                value={this.state.coursename}
-                onChange={event => {
-                  this.setState({ coursename: event.target.value });
-                }}
-                name="coursename"
-              />
-              <label>Contact Person </label>
-              <br />
-              <input
-                type="text"
-                value={this.state.coursepresenter}
-                onChange={event => {
-                  this.setState({ coursepresenter: event.target.value });
-                }}
-                name="coursepresenter"
-              />
-              <label>Phone Number </label> <br />
-              <input
-                type="text"
-                value={this.state.datestart}
-                onChange={event => {
-                  this.setState({ datestart: event.target.value });
-                }}
-                name="datestart"
-              />
-              <label>Email Address</label> <br />
-              <input
-                type="text"
-                value={this.state.dateend}
-                onChange={event => {
-                  this.setState({ dateend: event.target.value });
-                }}
-                name="dateend"
-              />
-            </form>
-            <button
-              className="btn option-button btn-primary float-right "
-              id="addButton"
-              onClick={() => this.courseSubmit()}
-            >
-              Add Provider
-            </button>
-          </div>
+  render() {
+    return (
+      <div>
+        <h1 id="title">New Provider Information</h1>
+        <div className="inputForms" id="input">
+          <form>
+            <label>Provider Name </label> <br />
+            <input
+              classtype="text"
+              value={this.state.firstname}
+              onChange={event => {
+                this.setState({ firstname: event.target.value });
+              }}
+              name="firstname"
+            />
+            <label>Contact Person </label>
+            <br />
+            <input
+              type="text"
+              value={this.state.lastname}
+              onChange={event => {
+                this.setState({ lastname: event.target.value });
+              }}
+              name="lastname"
+            />
+            <label>Phone Number </label> <br />
+            <input
+              type="text"
+              value={this.state.phone}
+              onChange={event => {
+                this.setState({ phone: event.target.value });
+              }}
+              name="phone"
+            />
+            <label>Email Address</label> <br />
+            <input
+              type="text"
+              value={this.state.email}
+              onChange={event => {
+                this.setState({ email: event.target.value });
+              }}
+              name="email"
+            />
+          </form>
+          <button
+            className="btn option-button btn-primary float-right "
+            id="addButton"
+            onClick={() => this.providerSubmit()}
+          >
+            Add Provider
+          </button>
         </div>
-    )
-}
+      </div>
+    );
+  }
 }

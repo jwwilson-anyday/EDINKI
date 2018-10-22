@@ -3,6 +3,7 @@ import Venderlist from './venderlist';
 import Courselist from './courselist';
 import Navbar from './navbar';
 import Vendercreate from './vendercreate';
+import Coursenew from './coursenew';
 
 class Container extends React.Component {
   constructor(props) {
@@ -16,18 +17,19 @@ class Container extends React.Component {
         <div>
           <h1>Edinki! - EDucation INKed In</h1>
           <p>Search engine for Dental Continumm Education</p>
-          <br />
           <h2> Education Vacation</h2>
           <br />
-
           <Navbar />
           <br />
-          <Venderlist />
-          <br />
-          
-          <Vendercreate />
-        
           <Courselist />
+          <Venderlist />
+
+          <br />
+
+          <Vendercreate />
+          <br />
+          <br />
+          <Coursenew />
         </div>
       </div>
     );
