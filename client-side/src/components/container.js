@@ -23,9 +23,7 @@ class Container extends React.Component {
           <br />
           <Courselist />
           <Venderlist />
-
           <br />
-
           <Vendercreate />
           <br />
           <br />
