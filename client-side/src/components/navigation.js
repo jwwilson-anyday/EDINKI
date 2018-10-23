@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-// import Vendercreate from './vendercreate';
-// import Coursenew from './coursenew';
-// import Venderlist from './venderlist';
-// import Courselist from './courselist';
-// import Container from './container';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Vendercreate from './vendercreate';
+import Coursenew from './coursenew';
+import Venderlist from './venderlist';
+import Courselist from './courselist';
+import Container from './container';
+import Links from './links';
+import Error from './error';
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -13,18 +15,17 @@ export default class Navigation extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h4>The Navigation Area</h4>
-        <div className="row">
+      <BrowserRouter>
+        <div>
+          <Links />
           <Switch>
-            {/* <Route path="/" component={Container} />
-            <Route path="/addnewprovider" component={Vendercreate} />
-            <Route path="/addnewcourse" component={Coursenew} />
-            <Route path="/providerlist" component={Venderlist} />
-            <Route path="/courselist" component={Courselist} /> */}
+            <Route path="/" exact component={Container} />
+            <Route path="/courselist" component={Courselist} />
+            <Route path="/venderlist" component={Venderlist} />
+            <Route component={Error} />
           </Switch>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }

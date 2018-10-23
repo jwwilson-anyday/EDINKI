@@ -48,6 +48,7 @@ export default class Courselist extends Component {
                     <span>
                       {course._id} {course.coursename} {course.coursepresenter}{' '}
                       {course.datestart} {course.dateend}
+                      <button></button>
                     </span>
                   </li>
                 </div>

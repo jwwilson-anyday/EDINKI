@@ -27,7 +27,7 @@ class Navbar extends React.Component {
     return (
       <div className="container">
         <div id="myNav">
-          <nav className="navbar float-right">
+          <nav >
             <form className="form-inline">
               <button
                 className="btn btn-outline-primary nav-button"

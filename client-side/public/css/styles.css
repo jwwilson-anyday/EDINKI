@@ -1,79 +1,91 @@
-#delete{
-    height:100%;
+#delete {
+  height: 100%;
 }
-#provider{
-    margin-top: 5px;
+#provider {
+  margin-top: 5px;
 }
-#provider:hover{
-    background-color: rgb(188, 246, 180);
+#provider:hover {
+  background-color: rgb(188, 246, 180);
 }
-#course{
-    margin-top: 5px;
+#course {
+  margin-top: 5px;
 }
-#course:hover{
-    background-color: rgb(248, 217, 168);
+#course:hover {
+  background-color: rgb(248, 217, 168);
 }
-#input{
-    margin:5px;
+#input {
+  margin: 5px;
 }
-#pastRides{
-    margin:5px;
+#pastRides {
+  margin: 5px;
 }
-#addButton{
-margin:5px;
+#addButton {
+  margin: 5px;
 }
-
-input{
-    width:100%;
+#pageButton {
+  display: flex;
+  justify-content: flex-end;
 }
-#myNav{
-    float: right;
-
+input {
+  width: 100%;
 }
-#users{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border: 1px black solid;
-   
-   
+#myNav {
+  display: flex;
+  justify-content: center;
 }
-#logoutButton:hover{
-    background:red
+#users {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px black solid;
 }
-.input{
-    width:100%;
-}
-.createButton{
-    margin-top:40px;
-    color:red;
-}
-#allUsers{
-    text-align: center;
-    margin-left:auto;
-    margin-right:40px;
-   display: block;
-}
-.nav-button{
-    margin-left:10px;
-    margin-right:10px;
+#logoutButton:hover {
+  background: red;
 }
 
-#loginbox{
-    display: block;
-    margin-left: auto;
-    margin-right:auto;
-    margin-top: 10px;
+.input {
+  width: 100%;
 }
-#title{
-    text-align: center;
+.createButton {
+  margin-top: 40px;
+  color: red;
 }
-#logo{
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom: 50px;
-    margin-top:25px;
+#allUsers {
+  text-align: center;
+  margin-left: auto;
+  margin-right: 40px;
+  display: block;
 }
-#displayButton{
-    bottom:0;
+.nav-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 10px;
+}
+#loginbox {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+#title {
+  text-align: center;
+}
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 25px;
+}
+#displayButton {
+  bottom: 0;
+}
+#picjpeg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
