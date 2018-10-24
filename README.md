@@ -3,66 +3,78 @@ EDINKI - EDucation INKed In
 
 # Summary
 
-This is a Continumm Education App for developing a central location for dentists to search Dental Continumm Education courses by location, dates, and categories.
-
-# Technologies
-
-The data is pretty simple and we want scalability and flexibility above all else so we are going to use ReactJs, NodeJs and MongoDB. Nearly all of our use of the data will be in basic inserts and reads.  Perfect for an MongoDB!
+This is a Continumm Education App for developing a central location for dentists, Dental Hygienists, Dental Assistants, Laboratory Technicians, and Other Dental Personnel to search Dental Continumm Education courses by location, dates, categories and professions.
 
 
-# Timeframe
+Epic – CE Website for finding Dental CE by Location, Topic, Date, Presenter
 
-You have about a day (+- 2 days) to build the entire frontend + backend for RUber.  
+Feature
+1.	Location Search
+2.	Topic Search
+3.  Profession Search
+4.  Date Search
+5.	Presenter Search
+6.	Education Provider Create/Read/Update/Delete CE Courses
 
-# Backlog
+1.	Location Search -Feature
+	As a USER
+	I want to find CE Courses By Location
+	So I can get Detailed information of a course located where I’d like to travel
 
-Here is a backlog that our team of investors has created for you to complete:
+A.	Story Points
+a.	Display world map with clickable regions with number indicator of Courses Available for that region. 
+b.	Click region to obtain more detailed map of Specific region with # indicating Available Courses
+c.	Click on # to obtain detail list of courses available under number for that specific region
+d.	Click on a specific course to obtain details of the specific course at the location I’m interested in traveling.
 
+2.	Topic Search – Feature
+	As a USER
+	I want to find CE Courses by Topic being Presented
+	So I can get Details of the Specific Course I’m interested in learning
 
-As a developer
-I want to perform CRUD on all users
-So that I can register and login and disable my customers
+A.	Story Points
+a.	Display a clickable list of Topics to allow a more detailed list of topics to be presented.
+b.	Display a clickable list of more detailed topics allowing a detail list of courses to be listed.
+c.	Display a clickable list of courses to allow more details to be listed about each individual course.
+d.	Display Details of the specific course selected for the Topic I’m interested in Learning.
+ 
+3.	Date Search – Feature
 
-As a user
-I want to be able to login
-So that I can view my profile
+As a User
+I want to find CE Courses by the Date it is being offered
+So I can get details of the courses being offered on a specific date.
 
-As a developer
-I want to perform CRUD on all rides
-So that I can see that data pertaining to the health of my business
+A.	Story Points
+a.	Display a dynamic calendar to allow a user to select a date on the calendar.
+b.	After clicking a date. display a list courses with the ability to sort by location, topic or presenters allowing selection to a more detailed view of the course
+c.	Display Details of the specific course selected by the date.
 
-As a user
-I want to be able to upload a profile picture 
-So that I can customize my avatar
+4.	Presenter Search – Feature
 
-As a user
-I want to be able to rate a ride
-So that I can give valuable feedback
+As a User
+I want to fine CE Courses that are being offered by a specific presenter
+So I can get details of the courses being offered by a specific speaker
 
-As a developer
-I want to make sure all endpoints have proper error handling
-So that I know when the back end team messed up
+A.	Story Points
+a.	Display an Aph list of Topics to allow a more detailed list of topics to be presented.
+b.	Display a clickable list of more detailed topics allowing a detail list of courses to be listed.
+c.	Display a clickable list of courses to allow more details to be listed about each individual course.
+d.	Display Details of the specific course selected for the Topic I’m interested in Learning.
 
-As a developer
-I want to create a log of all API requests
-So that I can help in debugging the app
+Database Website setup
 
+1. Mongo Data base first - (Models/Schema)
+A. rides
+	B. users
+2. Back in Software - Node.js 
+	( User Stories - 
+		1.  Who ia ir for:  Developer / User
+		2.  What is it doing?
+		3.  Why is it being done?
+	A. start with server - server.js
+	B. Controllers - userControllers.js
+	C. Routes - users.js
+	D. functionality -
 
--- STRETCH GOALS --
-
-As a developer 
-I want to associate a user id to each ride item
-such that I can look up all rides given a user id
-<!-- 
-    Check out mongoose documentation
-    https://mongoosejs.com/docs/populate.html
- * -->
-
-
-As a user
-I want to be able to login and get all rides associatd with my account
-So that I don't have to worry about other users rides / data
-
-As a developer
-I want to be able to estimate the time of a route
-So that my customers can determine how long a certain ride will take
+For a Calendar:
+Google : npm Fullcalendar react - https://www.npmjs.com/package/fullcalendar-react
