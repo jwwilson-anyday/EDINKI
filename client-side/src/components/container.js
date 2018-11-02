@@ -15,6 +15,7 @@ class Container extends React.Component {
   providerPage = () => {
     console.log('Provider Page');
   };
+  // redirect - use redirect here to route to page desired
 
   render() {
     return (

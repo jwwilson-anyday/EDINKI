@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+// redirect
 
 const Links = () => {
   return (
@@ -13,7 +14,7 @@ const Links = () => {
       >
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <li>
-            {''} <NavLink to="/">Home</NavLink>
+            {''} <NavLink to="/">Home</NavLink> 
           </li>
           <li>
             {''} <NavLink to="/courselist">Courses</NavLink>
