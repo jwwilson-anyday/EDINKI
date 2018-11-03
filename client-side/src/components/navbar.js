@@ -14,7 +14,7 @@ class Navbar extends React.Component {
     super(props);
 
     this.state = {
-      toVendorList: false
+      toCourseList: false
     };
   }
 
@@ -27,7 +27,7 @@ class Navbar extends React.Component {
 
   searchCategories= ()=> {
     //browserHistory.push('/venderlist');
-    //this.setState({ toVendorList: true });
+    this.setState({ toCourseList: true });
     //<Link to='/venderlist'></Link>
     //<Route path='/venderlist' component={Venderlist}  />
     //<Redirect to='/venderlist' />;
@@ -35,9 +35,9 @@ class Navbar extends React.Component {
   }
 
   render() {
-    if (this.state.toVendorList === true) {
-      console.log('toVenderlist = True');
-      <Redirect to='/venderlist' />;
+    if (this.state.toCourseList === true) {
+      console.log('toCourselist = True');
+      return (<Redirect to='/courselist' />);
     }
 
     return (

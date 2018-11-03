@@ -39,7 +39,7 @@ export default class Courselist extends Component {
       <div className="container">
         <div>
           <h3>Course List</h3>
-          <span>Number of Sourses in file: {this.state.courses.length}</span>
+          <span>Number of Courses in file: {this.state.courses.length}</span>
           <ul>
             {this.state.courses.map(course => {
               return (
