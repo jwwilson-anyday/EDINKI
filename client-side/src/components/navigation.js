@@ -22,6 +22,7 @@ export default class Navigation extends Component {
             <Route path="/" exact component={Container} />
             <Route path="/courselist" component={Courselist} />
             <Route path="/venderlist" component={Venderlist} />
+            <Route path="/vendercreate" component={Vendercreate} />
             {/* <Route component={Error} />     ****Needs a Path**** */}
           </Switch>
         </div>

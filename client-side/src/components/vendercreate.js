@@ -54,6 +54,7 @@ export default class Vendercreate extends Component {
   render() {
     return (
       <div>
+        <img id="logo" src="logo.png" />
         <h1 id="title">New Provider Information</h1>
         <div className="inputForms" id="input">
           <form>
@@ -65,7 +66,7 @@ export default class Vendercreate extends Component {
                 this.setState({ firstname: event.target.value });
               }}
               name="firstname"
-            />
+            /><br/>
             <label>Contact Person </label>
             <br />
             <input
@@ -75,7 +76,7 @@ export default class Vendercreate extends Component {
                 this.setState({ lastname: event.target.value });
               }}
               name="lastname"
-            />
+            /><br/>
             <label>Phone Number </label> <br />
             <input
               type="text"
@@ -84,7 +85,7 @@ export default class Vendercreate extends Component {
                 this.setState({ phone: event.target.value });
               }}
               name="phone"
-            />
+            /><br/>
             <label>Email Address</label> <br />
             <input
               type="text"
@@ -96,7 +97,7 @@ export default class Vendercreate extends Component {
             />
           </form>
           <button
-            className="btn option-button btn-primary float-right "
+            className="btn option-button btn-primary float-left "
             id="addButton"
             onClick={() => this.providerSubmit()}
           >

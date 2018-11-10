@@ -13,25 +13,59 @@
 #course:hover {
   background-color: rgb(248, 217, 168);
 }
-#input {
-  margin: 5px;
-}
+
 #pastRides {
   margin: 5px;
 }
 #addButton {
-  margin: 5px;
+  margin-top: 30px;
 }
 #pageButton {
   display: flex;
   justify-content: flex-end;
 }
+#input {
+  width: 550px;
+}
+.inputForms {
+  display: block;
+  border-radius: 5px;
+  background-color: #d3e2fd;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* width: 100%; */
+}
 input {
-  width: 100%;
+  width: 500px;
 }
 #myNav {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
+}
+/*Top navigation Styling */
+.nav {
+  display: block;
+  background-color: #0983d4;
+  color: #ffffff;
+  list-style: none;
+  text-align: center;
+  padding: 18px 0 18px 0;
+}
+.nav > li {
+  display: inline-block;
+  padding-right: 50px;
+  color: #ffffff;
+}
+/* Used the 'a' tag to represent <Navlink> in the code */
+.nav > li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav > li > a:hover {
+  color: #ec9f0f;
 }
 #users {
   margin-bottom: 10px;
@@ -40,10 +74,6 @@ input {
 }
 #logoutButton:hover {
   background: red;
-}
-
-.input {
-  width: 100%;
 }
 .createButton {
   margin-top: 40px;
@@ -58,6 +88,10 @@ input {
 .nav-button {
   margin-left: 10px;
   margin-right: 10px;
+  width: 120px;
+}
+.option-button {
+  margin-top: 50px;
 }
 .center {
   margin-left: auto;
@@ -73,12 +107,14 @@ input {
 }
 #title {
   text-align: center;
+ 
 }
 #logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  
   margin-top: 25px;
 }
 #displayButton {

@@ -38,17 +38,19 @@ export default class Courselist extends Component {
     return (
       <div className="container">
         <div>
+          <img id="logo" src="logo.png" />
+          {/* <Navbar /> */}
           <h3>Course List</h3>
-          <span>Number of Courses in file: {this.state.courses.length}</span>
+          <span>Number of Courses: {this.state.courses.length}</span>
           <ul>
             {this.state.courses.map(course => {
               return (
                 <div className="border" id="course" key={course._id}>
                   <li key={course._id}>
                     <span>
-                      {course._id} {course.coursename} {course.coursepresenter}{' '}
+                       {course.coursename} {course.coursepresenter}{' '}
                       {course.datestart} {course.dateend}
-                      <button></button>
+                      {/* <button /> */}
                     </span>
                   </li>
                 </div>

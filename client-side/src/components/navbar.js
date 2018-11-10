@@ -14,32 +14,39 @@ class Navbar extends React.Component {
     super(props);
 
     this.state = {
-      toCourseList: false
+      toCourseList: false,
+      toProviderlist: false
     };
   }
 
-  searchDates(e) {
+  searchDates=()=> {
+    this.setState({ toCourseList: true });
     console.log('Search Dates');
   }
-  searchLocations() {
+  searchLocations= ()=> {
+    this.setState({ toCourseList: true });
     console.log('Search Locations');
   }
 
   searchCategories= ()=> {
-    //browserHistory.push('/venderlist');
-    this.setState({ toCourseList: true });
-    //<Link to='/venderlist'></Link>
-    //<Route path='/venderlist' component={Venderlist}  />
-    //<Redirect to='/venderlist' />;
+   this.setState({ toCourseList: true });
+   
     console.log('Search Categories');
   }
+
+  searchProviders= ()=> {
+    this.setState({ toProviderlist: true });
+    
+     console.log('Search Providers');
+   }
+ 
 
   render() {
     if (this.state.toCourseList === true) {
       console.log('toCourselist = True');
       return (<Redirect to='/courselist' />);
     }
-
+  
     return (
       <div className="container">
         <div id="myNav">
@@ -54,7 +61,7 @@ class Navbar extends React.Component {
               </button>
               <button
                 className="btn btn-outline-primary nav-button"
-                onClick={() => this.searchDates()}
+                onClick={this.searchDates}
                 type="button"
               >
                 Dates
@@ -65,6 +72,13 @@ class Navbar extends React.Component {
                 type="button"
               >
                 Categories
+              </button>
+              <button
+                className="btn btn-outline-primary nav-button"
+                onClick={this.searchProviders}
+                type="button"
+              >
+                Providers
               </button>
             </form>
           </nav>

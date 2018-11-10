@@ -15,7 +15,8 @@ router.post('/', courseController.create);
 router.put('/:id', courseController.update);
 // Delete   a course by id
 router.delete('/:id', courseController.destroy);
-// Get      all courses associated with a user id
+// Get      catchall error
+router.get('*',courseController.catchall);
 
 
 module.exports = router;
