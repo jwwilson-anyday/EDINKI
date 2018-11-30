@@ -40,16 +40,16 @@ export default class Venderlist extends React.Component {
     return (
       <div className="container">
         <div>
-        <img id="logo" src="logo.png" />
-        <div id="pageButton">
-          <button
-            className="btn btn-outline-primary"
-            onClick={this.providerPage}
-            type="button"
-          >
-            Provider Page
+          <img id="logo" src="logo.png" />
+          <div id="pageButton">
+            <button
+              className="btn btn-outline-primary"
+              onClick={this.providerPage}
+              type="button"
+            >
+              SignIn/SignUp
           </button>
-        </div>
+          </div>
           <h3>Provider List</h3>
           <span>Number of Providers in file: {this.state.venders.length}</span>
           <ul>

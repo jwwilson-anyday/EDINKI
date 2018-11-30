@@ -46,7 +46,10 @@ class Navbar extends React.Component {
       console.log('toCourselist = True');
       return (<Redirect to='/courselist' />);
     }
-  
+  else if (this.state.toProviderlist === true){
+    console.log('toProviderlist = True');
+    return (<Redirect to='/venderlist'/>);
+  }
     return (
       <div className="container">
         <div id="myNav">

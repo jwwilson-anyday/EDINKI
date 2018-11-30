@@ -42,6 +42,7 @@ export default class Courselist extends Component {
           {/* <Navbar /> */}
           <h3>Course List</h3>
           <span>Number of Courses: {this.state.courses.length}</span>
+          <img id="logo" src="WorldMap.png" />
           <ul>
             {this.state.courses.map(course => {
               return (
