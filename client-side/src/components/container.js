@@ -41,7 +41,7 @@ class Container extends React.Component {
           <Navbar />
           <br />
         </div>
-        <p id="title" class="advertize_one">**************** Place Advertisment Here **************</p>
+        <p id="title" className="advertize_one">**************** Place Advertisment Here **************</p>
         <div>
           <h1 id="title">EDucation INKed In</h1>
           <p id="title">Search Engine for Dental Continumm Education</p>

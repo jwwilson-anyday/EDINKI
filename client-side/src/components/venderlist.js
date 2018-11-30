@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 export default class Venderlist extends React.Component {
   constructor(props) {
@@ -11,6 +12,8 @@ export default class Venderlist extends React.Component {
       vendername: '',
       datestart: '',
       dateend: '',
+
+      toSignInUp: false,
 
       venders: [] //In the data returned from the API call, the data returned  an object
     };
@@ -31,12 +34,23 @@ export default class Venderlist extends React.Component {
           vendername: '',
           datestart: '',
           dateend: '',
+          toSignInUp: false,
 
           venders: data.vender // used in line 87 to be able to map the array
         });
       });
   }
+
+  signInUp = () => {
+    this.setState({ toSignInUp: true });
+    console.log('SignIn/SignUp');
+  }
+
   render() {
+    if (this.state.toSignInUp === true) {
+      console.log('toSignInUp = True');
+      return (<Redirect to='/vendercreate' />);
+    }
     return (
       <div className="container">
         <div>
@@ -44,7 +58,7 @@ export default class Venderlist extends React.Component {
           <div id="pageButton">
             <button
               className="btn btn-outline-primary"
-              onClick={this.providerPage}
+              onClick={this.signInUp}
               type="button"
             >
               SignIn/SignUp
